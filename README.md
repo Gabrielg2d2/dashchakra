@@ -4,8 +4,6 @@
 
 Painel administrativo com NextJs e Chakra-ui.
 
-https://github.com/GabrielBritoAlmeida/ignews/blob/main/public/readme/home.png
-
 ![https://github.com/GabrielBritoAlmeida/dashchakra/blob/main/public/dash.png](https://github.com/GabrielBritoAlmeida/dashchakra/blob/main/public/dash.png)
 
 Dashboard de usuários inscritos.
