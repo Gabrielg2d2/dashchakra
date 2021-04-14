@@ -4,15 +4,15 @@
 
 Painel administrativo com NextJs e Chakra-ui.
 
-![Dashchakra%2025016e27d4214a8c9db56ca20ee466cf/dash.png](Dashchakra%2025016e27d4214a8c9db56ca20ee466cf/dash.png)
+![https://github.com/GabrielBritoAlmeida/dashchakra/tree/main/public/imageReadme/dash.png](https://github.com/GabrielBritoAlmeida/dashchakra/tree/main/public/imageReadme/dash.png)
 
 Dashboard de usuários inscritos.
 
-![Dashchakra%2025016e27d4214a8c9db56ca20ee466cf/user_create.png](Dashchakra%2025016e27d4214a8c9db56ca20ee466cf/user_create.png)
+![https://github.com/GabrielBritoAlmeida/dashchakra/tree/main/public/imageReadme/user_create.png](https://github.com/GabrielBritoAlmeida/dashchakra/tree/main/public/imageReadme/user_create.png)
 
 Cadastro de usuários, com validação yup e lib react-hook-form.
 
-![Dashchakra%2025016e27d4214a8c9db56ca20ee466cf/userTable.png](Dashchakra%2025016e27d4214a8c9db56ca20ee466cf/userTable.png)
+![https://github.com/GabrielBritoAlmeida/dashchakra/tree/main/public/imageReadme/userTable.png](https://github.com/GabrielBritoAlmeida/dashchakra/tree/main/public/imageReadme/userTable.png)
 
 Tabela de usuários.
 
