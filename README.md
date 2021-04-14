@@ -4,17 +4,17 @@
 
 Painel administrativo com NextJs e Chakra-ui.
 
+https://github.com/GabrielBritoAlmeida/ignews/blob/main/public/readme/home.png
 
-
-![https://github.com/GabrielBritoAlmeida/dashchakra/tree/main/public/dash.png](https://github.com/GabrielBritoAlmeida/dashchakra/tree/main/public/dash.png)
+![https://github.com/GabrielBritoAlmeida/dashchakra/blob/main/public/dash.png](https://github.com/GabrielBritoAlmeida/dashchakra/blob/main/public/dash.png)
 
 Dashboard de usuários inscritos.
 
-![https://github.com/GabrielBritoAlmeida/dashchakra/tree/main/public/user_create.png](https://github.com/GabrielBritoAlmeida/dashchakra/tree/main/public/user_create.png)
+![https://github.com/GabrielBritoAlmeida/dashchakra/blob/main/public/user_create.png](https://github.com/GabrielBritoAlmeida/dashchakra/blob/main/public/user_create.png)
 
 Cadastro de usuários, com validação yup e lib react-hook-form.
 
-![https://github.com/GabrielBritoAlmeida/dashchakra/tree/main/public/userTable.png](https://github.com/GabrielBritoAlmeida/dashchakra/tree/main/public/userTable.png)
+![https://github.com/GabrielBritoAlmeida/dashchakra/blob/main/public/userTable.png](https://github.com/GabrielBritoAlmeida/dashchakra/blob/main/public/userTable.png)
 
 Tabela de usuários.
 
