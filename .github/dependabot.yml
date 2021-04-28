@@ -1,0 +1,27 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "08:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: framer-motion
+    versions:
+    - 4.1.10
+    - 4.1.5
+    - 4.1.6
+    - 4.1.8
+    - 4.1.9
+  - dependency-name: "@types/node"
+    versions:
+    - 14.14.41
+    - 15.0.0
+  - dependency-name: react-hook-form
+    versions:
+    - 7.2.1
+    - 7.2.3
+  - dependency-name: "@chakra-ui/react"
+    versions:
+    - 1.5.2
