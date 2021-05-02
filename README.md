@@ -63,3 +63,8 @@ yarn add react-hook-form
 yarn add yup @hookform/resolvers
 
 ```
+
+```tsx
+yarn add miragejs -D
+
+```
