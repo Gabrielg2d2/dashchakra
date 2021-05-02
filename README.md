@@ -68,3 +68,9 @@ yarn add yup @hookform/resolvers
 yarn add miragejs -D
 
 ```
+
+```tsx
+yarn add faker -D
+yarn add @types/faker - D
+
+```
