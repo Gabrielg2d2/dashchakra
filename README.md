@@ -63,11 +63,14 @@ yarn add react-hook-form
 yarn add yup @hookform/resolvers
 
 ```
+[Miragejs](https://miragejs.com/)
 
 ```tsx
 yarn add miragejs -D
 
 ```
+
+[Faker](https://www.npmjs.com/package/faker)
 
 ```tsx
 yarn add faker -D
