@@ -77,3 +77,10 @@ yarn add faker -D
 yarn add @types/faker - D
 
 ```
+
+[React Query](https://react-query.tanstack.com/)
+
+```tsx
+yarn add react-query
+
+```
