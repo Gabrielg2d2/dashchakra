@@ -84,3 +84,10 @@ yarn add @types/faker - D
 yarn add react-query
 
 ```
+
+[Axios](https://github.com/axios/axios)
+
+```tsx
+yarn add axios
+
+```
