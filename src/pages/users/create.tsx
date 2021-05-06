@@ -43,9 +43,8 @@ export default function CreateUser() {
 
   const handleCreateUserForm: SubmitHandler<CreateFormData> = async (data) => {
     await new Promise((resolve) => setTimeout(resolve, 2000))
-
-    console.log('🚀 ~ file: index.tsx ~ line 9 ~ handleSign ~ data', data)
   }
+
   return (
     <Box>
       <Header />

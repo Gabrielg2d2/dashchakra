@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import {
   Box,
   Button,
@@ -24,6 +25,7 @@ import { useUsers } from 'services/hooks/userUsers'
 
 export default function UserList() {
   const { data, isLoading, isFetching, error } = useUsers()
+  const [page, setPage] = useState(1)
 
   const isWideVersion = useBreakpointValue({
     base: false,
@@ -116,8 +118,8 @@ export default function UserList() {
               </Table>
               <Pagination
                 totalCountOfRegisters={200}
-                currentPage={5}
-                onPageChange={() => {}}
+                currentPage={page}
+                onPageChange={setPage}
               />
             </>
           )}

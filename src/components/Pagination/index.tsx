@@ -5,7 +5,7 @@ type PaginationProps = {
   totalCountOfRegisters?: number
   registersPerPage?: number
   currentPage?: number
-  onPageChange?: (page: number) => void
+  onPageChange: (page: number) => void
 }
 
 const siblingsCount = 1
@@ -20,11 +20,10 @@ function generatePagesArray(from: number, to: number) {
 
 export function Pagination({
   totalCountOfRegisters,
-  currentPage,
-  onPageChange,
-  registersPerPage
+  currentPage = 1,
+  registersPerPage = 10,
+  onPageChange
 }: PaginationProps) {
-  console.log('🚀 ~ file: index.tsx ~ line 27 ~ onPageChange', onPageChange)
   const lastPage = Math.floor(totalCountOfRegisters / registersPerPage)
 
   const previousPages =
@@ -50,7 +49,7 @@ export function Pagination({
           <>
             <PaginationItem number={1} />
             {currentPage > 2 + siblingsCount && (
-              <Text color="green.300" width="8" textAlign="end">
+              <Text color="gray.300" width="8" textAlign="center">
                 ...
               </Text>
             )}
@@ -59,19 +58,33 @@ export function Pagination({
 
         {previousPages.length > 0 &&
           previousPages.map((page) => (
-            <PaginationItem key={page} number={page} />
+            <PaginationItem
+              key={page}
+              onPageChange={onPageChange}
+              number={page}
+            />
           ))}
 
-        <PaginationItem number={currentPage} isCurrent />
+        <PaginationItem
+          number={currentPage}
+          onPageChange={onPageChange}
+          isCurrent
+        />
 
         {nextPages.length > 0 &&
-          nextPages.map((page) => <PaginationItem key={page} number={page} />)}
+          nextPages.map((page) => (
+            <PaginationItem
+              key={page}
+              onPageChange={onPageChange}
+              number={page}
+            />
+          ))}
 
         {currentPage + siblingsCount < lastPage && (
           <>
-            <PaginationItem number={lastPage} />
+            <PaginationItem number={lastPage} onPageChange={onPageChange} />
             {currentPage + 1 + siblingsCount < lastPage && (
-              <Text color="green.300" width="8" textAlign="end">
+              <Text color="gray.300" width="8" textAlign="center">
                 ...
               </Text>
             )}
