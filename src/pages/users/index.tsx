@@ -1,3 +1,4 @@
+import { GetServerSideProps } from 'next'
 import { useState } from 'react'
 import {
   Box,
@@ -150,3 +151,14 @@ export default function UserList() {
     </Box>
   )
 }
+
+//Server Side, não funciona com o MirageJs, apenas com api real
+// export const getServerSideProps: GetServerSideProps = async () => {
+//   const { users } = await getUsers(1)
+
+//   return {
+//     props: {
+//       users
+//     }
+//   }
+// }
