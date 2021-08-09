@@ -755,10 +755,10 @@
   resolved "https://registry.yarnpkg.com/@hapi/hoek/-/hoek-9.1.1.tgz#9daf5745156fd84b8e9889a2dc721f0c58e894aa"
   integrity sha512-CAEbWH7OIur6jEOzaai83jq3FmKmv4PmX1JYfs9IrYcGEVI/lyL1EXJGCj7eFVJ0bg5QR8LMxBlEtA+xKiLpFw==
 
-"@hookform/resolvers@^2.5.1":
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/@hookform/resolvers/-/resolvers-2.5.1.tgz#09f2228c9061c350819881dc11e4f65af90c5a1a"
-  integrity sha512-dNChuOJ7ker2ZALGhXO6KjeycwnBGcSslGsREgqTDSiBOgbEysupfGTJKzQsb0sXpNhrZLCGvQcT+qPmCdBEMw==
+"@hookform/resolvers@^2.7.1":
+  version "2.7.1"
+  resolved "https://registry.yarnpkg.com/@hookform/resolvers/-/resolvers-2.7.1.tgz#691f02a82b44317dc30df44765463f2eb73abf09"
+  integrity sha512-dX//pnHJK9CJSz0bURQ7B84vSy1OnqJmB+ziVY4Jvc5VyL2qe0l3ol8QicCkjKxFdlOLlAds+eF0H0u8HELk5A==
 
 "@humanwhocodes/config-array@^0.5.0":
   version "0.5.0"
@@ -3471,10 +3471,10 @@ react-is@^16.7.0, react-is@^16.8.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react-query@^3.19.0:
-  version "3.19.0"
-  resolved "https://registry.yarnpkg.com/react-query/-/react-query-3.19.0.tgz#e1fe8f62b9956fb2986317686c27f79ad7ee4e7e"
-  integrity sha512-AaerSVsmBG2iIciwX2x8cWZS4Htw/4u2GFTYK8oiicpX3PY5mvat/8/Y3wZhM47KlllAzvC+P9MW81oHuEt2wg==
+react-query@^3.19.2:
+  version "3.19.2"
+  resolved "https://registry.yarnpkg.com/react-query/-/react-query-3.19.2.tgz#8ab70c9328835604d05919e3878fcce555603c0e"
+  integrity sha512-YYQ+jZ4DaabnDWEbKCIvkouLWif2iPFgBIeKLPkUmhXM4cz+Kscb5Q7mz+U57Ip17tarhFiNwX86gWXM69ouQQ==
   dependencies:
     "@babel/runtime" "^7.5.5"
     broadcast-channel "^3.4.1"
