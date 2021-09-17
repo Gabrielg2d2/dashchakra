@@ -27,7 +27,7 @@
   "devDependencies": {    
     "@types/react": "^17.0.6",
     "@types/faker": "^5.5.7",
-    "@types/node": "^16.4.13",
+    "@types/node": "^16.9.2",
     "@types/react": "^17.0.16",
     "@typescript-eslint/eslint-plugin": "^4.29.0",
     "@typescript-eslint/parser": "^4.29.0",
@@ -39,6 +39,6 @@
     "faker": "^5.5.3",
     "miragejs": "^0.1.41",
     "prettier": "2.3.2",
-     "typescript": "^4.3.5"
+     "typescript": "^4.4.3"
   }
 }
