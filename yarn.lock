@@ -3570,10 +3570,10 @@ react-hook-form@^7.18.0:
   resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.18.0.tgz#2ba847096be0209e1f6e4d82e7168a037a2fe103"
   integrity sha512-aTFs1jXGvpBBv4vYuhheVd9KbAZw/l3DOZhLIadNDyFddaDQmn+yJa63IZ14GDFz4NFgIi+ROkubfGJG2x6q2Q==
 
-react-icons@^4.2.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.2.0.tgz#6dda80c8a8f338ff96a1851424d63083282630d0"
-  integrity sha512-rmzEDFt+AVXRzD7zDE21gcxyBizD/3NqjbX6cmViAgdqfJ2UiLer8927/QhhrXQV7dEj/1EGuOTPp7JnLYVJKQ==
+react-icons@^4.7.1:
+  version "4.7.1"
+  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.7.1.tgz#0f4b25a5694e6972677cb189d2a72eabea7a8345"
+  integrity sha512-yHd3oKGMgm7zxo3EA7H2n7vxSoiGmHk5t6Ou4bXsfcgWyhfDKMpyKfhHR6Bjnn63c+YXBLBPUql9H4wPJM6sXw==
 
 react-is@17.0.2:
   version "17.0.2"
