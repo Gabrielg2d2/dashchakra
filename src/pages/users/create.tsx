@@ -1,13 +1,13 @@
 import { useRouter } from 'next/dist/client/router'
 import {
-  Box,
-  Button,
-  Divider,
-  Flex,
-  Heading,
-  HStack,
-  SimpleGrid,
-  VStack
+	Box,
+	Button,
+	Divider,
+	Flex,
+	Heading,
+	HStack,
+	SimpleGrid,
+	VStack
 } from '@chakra-ui/react'
 import { InputForm } from 'components/Form/Input'
 import Header from 'components/Header'
@@ -15,7 +15,7 @@ import Header from 'components/Header'
 import Sidebar from 'components/Sidebar'
 import Link from 'next/link'
 
-import { useForm, SubmitHandler } from 'react-hook-form'
+import { useForm, type SubmitHandler } from 'react-hook-form'
 import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { useMutation } from 'react-query'
@@ -23,128 +23,128 @@ import { api } from 'services/api'
 import { queryClient } from 'services/queryClient'
 
 type CreateFormData = {
-  email: string
-  password: string
+	email: string
+	password: string
 }
 
 const createFormSchema = yup.object().shape({
-  name: yup.string().required('Nome obrigatória'),
-  email: yup.string().required('E-mail obrigatório').email('E-mail inválido'),
-  password: yup
-    .string()
-    .required('Senha obrigatória')
-    .min(6, 'No mínimo 6 caracteres'),
-  password_confirmation: yup
-    .string()
-    .oneOf([null, yup.ref('password')], 'As senhas precisam ser iguais')
+	name: yup.string().required('Nome obrigatória'),
+	email: yup.string().required('E-mail obrigatório').email('E-mail inválido'),
+	password: yup
+		.string()
+		.required('Senha obrigatória')
+		.min(6, 'No mínimo 6 caracteres'),
+	password_confirmation: yup
+		.string()
+		.oneOf([null, yup.ref('password')], 'As senhas precisam ser iguais')
 })
 
 export default function CreateUser() {
-  const router = useRouter()
+	const router = useRouter()
 
-  const createUser = useMutation(
-    async (user: CreateFormData) => {
-      const response = await api.post('users', {
-        user: {
-          ...user,
-          created_at: new Date()
-        }
-      })
+	const createUser = useMutation(
+		async (user: CreateFormData) => {
+			const response = await api.post('users', {
+				user: {
+					...user,
+					created_at: new Date()
+				}
+			})
 
-      return response.data.user
-    },
-    {
-      onSuccess: () => {
-        queryClient.invalidateQueries('users')
-      }
-    }
-  )
+			return response.data.user
+		},
+		{
+			onSuccess: () => {
+				queryClient.invalidateQueries('users')
+			}
+		}
+	)
 
-  const { register, handleSubmit, formState } = useForm({
-    resolver: yupResolver(createFormSchema)
-  })
-  const { errors } = formState
+	const { register, handleSubmit, formState } = useForm({
+		resolver: yupResolver(createFormSchema)
+	})
+	const { errors } = formState
 
-  const handleCreateUserForm: SubmitHandler<CreateFormData> = async (
-    values
-  ) => {
-    await createUser.mutateAsync(values), router.push('/users')
-  }
+	const handleCreateUserForm: SubmitHandler<CreateFormData> = async (
+		values
+	) => {
+		await createUser.mutateAsync(values), router.push('/users')
+	}
 
-  return (
-    <Box>
-      <Header />
+	return (
+		<Box>
+			<Header />
 
-      <Flex w="100%" maxW={1480} mx="auto" my="6" px="6">
-        <Sidebar />
+			<Flex w="100%" maxW={1480} mx="auto" my="6" px="6">
+				<Sidebar />
 
-        <Box
-          as="form"
-          flex="1"
-          borderRadius={8}
-          bg="gray.800"
-          p="8"
-          onSubmit={handleSubmit(handleCreateUserForm)}
-        >
-          <Heading size="lg" fontWeight="normal">
-            Criar usuário
-          </Heading>
+				<Box
+					as="form"
+					flex="1"
+					borderRadius={8}
+					bg="gray.800"
+					p="8"
+					onSubmit={handleSubmit(handleCreateUserForm)}
+				>
+					<Heading size="lg" fontWeight="normal">
+						Criar usuário
+					</Heading>
 
-          <Divider my="6" borderColor="gray.700" />
+					<Divider my="6" borderColor="gray.700" />
 
-          <VStack>
-            <SimpleGrid w="100%" minChildWidth="240px" spacing="8">
-              <InputForm
-                name="name"
-                label="Nome completo"
-                error={errors.name}
-                {...register('name')}
-              />
-              <InputForm
-                name="email"
-                type="email"
-                label="E-mail"
-                error={errors.email}
-                {...register('email')}
-              />
-            </SimpleGrid>
+					<VStack>
+						<SimpleGrid w="100%" minChildWidth="240px" spacing="8">
+							<InputForm
+								name="name"
+								label="Nome completo"
+								error={errors.name}
+								{...register('name')}
+							/>
+							<InputForm
+								name="email"
+								type="email"
+								label="E-mail"
+								error={errors.email}
+								{...register('email')}
+							/>
+						</SimpleGrid>
 
-            <SimpleGrid w="100%" minChildWidth="280px" spacing="8">
-              <InputForm
-                name="password"
-                type="password"
-                label="Senha"
-                error={errors.password}
-                {...register('password')}
-              />
-              <InputForm
-                name="password_confirmation"
-                type="password"
-                label="Confirmar senha"
-                error={errors.password_confirmation}
-                {...register('password_confirmation')}
-              />
-            </SimpleGrid>
-          </VStack>
+						<SimpleGrid w="100%" minChildWidth="280px" spacing="8">
+							<InputForm
+								name="password"
+								type="password"
+								label="Senha"
+								error={errors.password}
+								{...register('password')}
+							/>
+							<InputForm
+								name="password_confirmation"
+								type="password"
+								label="Confirmar senha"
+								error={errors.password_confirmation}
+								{...register('password_confirmation')}
+							/>
+						</SimpleGrid>
+					</VStack>
 
-          <Flex mt="8" justify="flex-end">
-            <HStack spacing="4">
-              <Link href="/users" passHref>
-                <Button as="a" colorScheme="whiteAlpha" cursor="pointer">
-                  Cancelar
-                </Button>
-              </Link>
-              <Button
-                type="submit"
-                colorScheme="pink"
-                isLoading={formState.isSubmitting}
-              >
-                Salvar
-              </Button>
-            </HStack>
-          </Flex>
-        </Box>
-      </Flex>
-    </Box>
-  )
+					<Flex mt="8" justify="flex-end">
+						<HStack spacing="4">
+							<Link href="/users" passHref>
+								<Button as="a" colorScheme="whiteAlpha" cursor="pointer">
+									Cancelar
+								</Button>
+							</Link>
+							<Button
+								type="submit"
+								colorScheme="pink"
+								isLoading={formState.isSubmitting}
+							>
+								Salvar
+							</Button>
+						</HStack>
+					</Flex>
+				</Box>
+			</Flex>
+		</Box>
+	)
 }
