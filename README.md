@@ -24,6 +24,18 @@ Tabela de usuários.
 - React-icons
 - React-hook-form
 - Yup
+- Biome
+
+## Lint e formatação
+
+O projeto usa o Biome no lugar de ESLint e Prettier.
+
+```bash
+yarn lint
+yarn format
+```
+
+`yarn lint` executa `biome check .`. `yarn format` executa `biome check --write .`.
 
 ### Dependências
 
